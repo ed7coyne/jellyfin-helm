@@ -42,4 +42,7 @@ spec:
   {{- with .Values.persistence.media.storageClass }}
   storageClassName: {{ . | quote }}
   {{- end }}
+  {{- with .Values.persistence.media.volumeName }}
+  volumeName: {{ . | quote }}
+  {{- end }}
 {{- end }}
